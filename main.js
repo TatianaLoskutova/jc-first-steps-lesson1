@@ -12,7 +12,7 @@ function getPlayerName() {
   return playerName;
 }
 
-const name = getPlayerName();
+const playerName = getPlayerName(); // "Татьяна"
 
 const getRandomNumber = () => {
   const randomNumber = Math.round(Math.random() * 100);
@@ -20,3 +20,13 @@ const getRandomNumber = () => {
 };
 
 const number = getRandomNumber();
+
+console.log(playerName, number);
+
+const game = (max, min, attNumber, randomNumber, name) => {
+  alert(`Привет, ${name}!
+  Я загдал число в интервале от ${min} до ${max}.
+  У тебя есть ${attNumber} попыток, чтобы отгадать это число`);
+};
+
+game(MAX, MIN, ATTEMPTS_NUMBER, number, playerName);
