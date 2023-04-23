@@ -38,7 +38,9 @@ const game = (max, min, attNumber, randomNumber, name) => {
       return;
     }
   }
-  alert(`Дружище, ты не справился с заданием за ${attNumber} попыток.`);
+  alert(
+    `${name}, дружище, ты не справился с заданием за ${attNumber} попыток.`
+  );
 };
 
 game(MAX, MIN, ATTEMPTS_NUMBER, number, playerName);
