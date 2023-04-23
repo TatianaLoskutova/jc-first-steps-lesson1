@@ -27,6 +27,17 @@ const game = (max, min, attNumber, randomNumber, name) => {
   alert(`Привет, ${name}!
   Я загдал число в интервале от ${min} до ${max}.
   У тебя есть ${attNumber} попыток, чтобы отгадать это число`);
+  for (let i = 0; i < attNumber; i++) {
+    const playerAnswer = prompt("Какое число я загадал?", "");
+    if (playerAnswer > randomNumber) {
+      alert("Мое число меньше");
+    } else if (playerAnswer < randomNumber) {
+      alert("Мое число больше");
+    } else {
+      alert("Ты Угадал!!!");
+      return;
+    }
+  }
 };
 
 game(MAX, MIN, ATTEMPTS_NUMBER, number, playerName);
