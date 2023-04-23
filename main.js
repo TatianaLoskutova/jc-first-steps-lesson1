@@ -13,3 +13,10 @@ function getPlayerName() {
 }
 
 const name = getPlayerName();
+
+const getRandomNumber = () => {
+  const randomNumber = Math.round(Math.random() * 100);
+  return randomNumber;
+};
+
+const number = getRandomNumber();
